@@ -1,14 +1,12 @@
-import AnimatedCursor from "react-animated-cursor";
 import FormEmail from "./FormEmail";
-
 
 const Contact = () => {
     return (
-        <div className=" max-w-6xl mx-auto ">
+        <div className=" max-w-6xl mx-auto " id='contact'>
             <section className="md:py-24 lg:py-24">
-                <h1 className=" text-2xl md:text-5xl lg:text-7xl font-bold text-center text-black pb-20">CONTACT ME</h1>
-                <h3 className=" text-xl md:text-4xl lg:text-5xl font-bold text-center text-black">You're launching a business and we <br />
-                    can help you make it look pretty.</h3>
+                <h1 className=" text-2xl md:text-5xl lg:text-7xl font-bold text-center text-black py-6">Get In Touch</h1>
+                {/* <h3 className=" text-xl md:text-4xl lg:text-5xl font-bold text-center text-black">You're launching a business and we <br />
+                    can help you make it look pretty.</h3> */}
             </section>
             <section className=" bg-pink-200 flex flex-col md:flex-row lg:flex-row justify-evenly py-10 text-center">
                 <div className=" border-b border-pink-400 md:border-b-0 lg:border-b-0 md:border-r md:border-pink-400 py-3 md:pr-5 lg:pr-10">
@@ -38,14 +36,6 @@ const Contact = () => {
                     <a href="https://web.facebook.com/rajotto.razz" target="blank" className=' text-xl md:text-3xl lg:text-6xl font-extrabold'>Instagram</a>
                 </div>
             </section>
-            <AnimatedCursor
-                innerSize={25}
-                outerSize={25}
-                color='193, 11, 111'
-                outerAlpha={0.2}
-                innerScale={0.7}
-                outerScale={8}
-            />
         </div>
     );
 };

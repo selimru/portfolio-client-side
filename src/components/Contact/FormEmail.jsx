@@ -16,11 +16,11 @@ const FormEmail = () => {
 
     return (
         <div>
-            <h1 id='form' className=" text-2xl md:text-5xl lg:text-7xl text-center font-bold text-white">By all means, send me an email and get in
+            <h1 id='form' className=" text-2xl md:text-5xl lg:text-7xl text-center font-bold text-white">Send me an email and get in
                 touch.</h1>
             <section className=' py-10'>
                 <form ref={form} onSubmit={sendEmail}>
-                    <div className="flex flex-col gap-4 justify-center">
+                    <div className="flex flex-col gap-4 justify-center px-4 md:px-0 lg:px-0">
                         <div className=' flex flex-col md:flex-row lg:flex-row items-center justify-center gap-5'>
                             <div className='w-full md:w-[30%] lg:w-[30%]'>
                                 <TextInput name='from_name' placeholder='Name' id="small" type="text" sizing="md" />

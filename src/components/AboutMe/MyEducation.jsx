@@ -1,10 +1,28 @@
 import { FaSuitcase } from "react-icons/fa";
 import { MdCastForEducation } from "react-icons/md";
+import AOS from 'aos'
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
+
 const MyEducation = () => {
+
+    useEffect(() => {
+        AOS.init({
+            offset: 100,
+            duration: 600,
+            easing: 'ease-in-sine',
+            delay: 100,
+        });
+    }, []);
+
     return (
-        <div className=" max-w-6xl mx-auto bg-slate-950 text-white">
+        <div className=" max-w-6xl mx-auto bg-slate-950 text-white py-5">
+            <h2 className=' text-2xl md:text-5xl lg:text-7xl font-semibold text-center text-white md:mb-16 '>About Me</h2>
             <div className=" flex flex-col md:flex-row items-center lg:flex-row gap-5 w-[90%] mx-auto py-10 justify-evenly">
-                <div className=" rounded-md w-full md:w-[50%] lg:w-[50%] border border-pink-200 p-3 bg-slate-900 space-y-2">
+                <div
+                    className=" rounded-md w-full md:w-[50%] lg:w-[50%] border border-pink-200 p-3 bg-slate-900 space-y-2"
+                    data-aos="flip-up"
+                >
                     <div className=" flex flex-row gap-3 items-center px-3">
                         <MdCastForEducation className=" text-3xl" />
                         <h3 className=" text-3xl font-semibold">My Education</h3>
@@ -46,8 +64,11 @@ const MyEducation = () => {
                         </div>
                     </div>
                 </div>
-                <div className="bg-slate-900 space-y-2 rounded-md w-full lg:h-[340px] md:h-[435px] md:w-[50%] lg:w-[50%] border border-pink-200 p-3">
-                <div className=" border-gray-500 flex flex-row gap-3 items-center">
+                <div
+                    className="bg-slate-900 space-y-2 rounded-md w-full lg:h-[340px] md:h-[435px] md:w-[50%] lg:w-[50%] border border-pink-200 p-3"
+                    data-aos="flip-up"
+                >
+                    <div className=" border-gray-500 flex flex-row gap-3 items-center">
                         <FaSuitcase className=" text-3xl" />
                         <h3 className=" text-3xl font-semibold">My Experience</h3>
                     </div>

@@ -1,7 +1,11 @@
 import { Footer } from "flowbite-react";
 import me from '../assets/me.png'
+import { useContext } from "react";
+import { FunctionContext } from "../hooks/Context";
 
 const FooterPage = () => {
+    const { scrollToElement } = useContext(FunctionContext)
+
     return (
         <div>
             <Footer container className="  bg-pink-100">
@@ -12,10 +16,9 @@ const FooterPage = () => {
                             <h3 className=' text-xl md:text-2xl lg:text-3xl text-black font-extrabold'>Se<span className=' text-pink-500'>lim</span></h3>
                         </div>
                         <Footer.LinkGroup className=" gap-4">
-                            <Footer.Link href="#">About</Footer.Link>
-                            <Footer.Link href="#">Privacy Policy</Footer.Link>
-                            <Footer.Link href="#">Licensing</Footer.Link>
-                            <Footer.Link href="#">Contact</Footer.Link>
+                            <a onClick={() => scrollToElement('home')}>Home</a>
+                            <a onClick={() => scrollToElement('about')}>About</a>
+                            <a onClick={() => scrollToElement('contact')}>Contact</a>
                         </Footer.LinkGroup>
                     </div>
                     <Footer.Divider />
